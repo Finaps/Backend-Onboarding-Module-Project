@@ -1,0 +1,8 @@
+@startuml
+class Pokemon {
+  int Id
+  string Name
+}
+
+Pokemon
+@enduml

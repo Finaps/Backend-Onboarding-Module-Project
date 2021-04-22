@@ -1,8 +1,5 @@
-using System;
 using System.Net.Http;
 using System.Text.Json;
-using System.Threading;
-using System.Threading.Tasks;
 using Bomp.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -38,6 +35,9 @@ namespace Bomp.Controllers
       }
     }
 
+    /// <Challenge>
+    /// Make sure each time a pokemon is retrieved, it is added to our own database
+    /// </Challenge>
     [HttpGet("{id}")]
     [ProducesResponseType(200)]
     [ProducesResponseType(404)]
