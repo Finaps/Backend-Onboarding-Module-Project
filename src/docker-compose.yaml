@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  backend:
+    image: Bomp:latest
+    build:
+      context: ./backend
+    ports:
+      - 5000:80
+  client:
+    image: Bomp:latest
+    build:
+      context: ./client
+    ports:
+      - 3000:3000
+  database:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - 1433:1433
