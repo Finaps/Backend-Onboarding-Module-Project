@@ -21,6 +21,9 @@ namespace Bomp.Controllers
         PropertyNameCaseInsensitive = true,
     };
 
+    /// <Challenge>
+    /// Currently this method always returns ditto instead of a random pokemon, change it so it does
+    /// </Challenge>
     [HttpGet]
     [ProducesResponseType(200)]
     [ProducesResponseType(404)]
@@ -40,11 +43,6 @@ namespace Bomp.Controllers
     [ProducesResponseType(404)]
     public Pokemon GetPokemonById(int id)
     {
-      var options = new JsonSerializerOptions
-      {
-          PropertyNameCaseInsensitive = true,
-      };
-
       using (var httpClient = new HttpClient())
       {
         var response = httpClient.GetAsync($"https://pokeapi.co/api/v2/pokemon/{id}").Result;
