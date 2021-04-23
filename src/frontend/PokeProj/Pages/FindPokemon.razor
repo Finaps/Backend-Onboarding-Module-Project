@@ -1,0 +1,28 @@
+﻿@page "/findpokemon"
+
+@using PokeProj.Models;
+@inject Services.IGetPokemonService GetPokemonService
+
+<h3>Press the button to get a random Pokemon encounter!</h3>
+
+<br><button @onclick="FindNewPokemon">Find Pokemon</button>
+
+<br><br><p>Pokemon encountered:</p>
+
+@if (currentPokemon == null)
+{
+    <ul><li><p>None</p></li></ul>
+}
+else
+{
+    <ul><li><p>ID: @currentPokemon.Id - Name: @currentPokemon.Name</p></li></ul>
+}
+@code {
+    private Pokemon currentPokemon;
+
+    private async void FindNewPokemon()
+    {
+        currentPokemon = await GetPokemonService.GetRandomPokemon();
+        StateHasChanged();
+    }
+}

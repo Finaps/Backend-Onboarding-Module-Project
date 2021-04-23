@@ -7,3 +7,4 @@ Ideas:
 - More tests
 - Allow stuff to be stored in the db
 - How to get a db running in docker
+- Use DI to ensure we use only one httpclient for the entire controller

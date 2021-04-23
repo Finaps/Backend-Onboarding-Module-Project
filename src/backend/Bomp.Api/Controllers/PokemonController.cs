@@ -21,7 +21,7 @@ namespace Bomp.Controllers
     /// <Challenge>
     /// Currently this method always returns ditto instead of a random pokemon, change it so it does
     /// </Challenge>
-    [HttpGet]
+    [HttpGet("random")]
     [ProducesResponseType(200)]
     [ProducesResponseType(404)]
     public Pokemon GetRandomPokemon()

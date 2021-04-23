@@ -1,0 +1,30 @@
+﻿@page "/pokemonbyid"
+
+@using PokeProj.Models;
+@inject Services.IGetPokemonService GetPokemonService
+
+<h3>Find Pokemon by their ID</h3>
+
+<br>
+<input type="number" @bind="idToFind" />
+<button @onclick="FindNewPokemon">Find Pokemon</button>
+
+<br><br><p>Pokemon data:</p>
+
+@if (currentPokemon == null)
+{
+    <ul><li><p>None</p></li></ul>
+}
+else
+{
+    <ul><li><p>ID: @currentPokemon.Id - Name: @currentPokemon.Name</p></li></ul>
+}
+@code {
+    private int idToFind;
+    private Pokemon currentPokemon;
+    private async void FindNewPokemon()
+    {
+        currentPokemon = await GetPokemonService.GetPokemonById(idToFind);
+        StateHasChanged();
+    }
+}
