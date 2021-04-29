@@ -21,7 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Bomp.Api\HRSolution.Web.Api.csproj" />
+      <ProjectReference Include="..\Bomp.Api\Bomp.Api.csproj" />
     </ItemGroup>
 
     <ItemGroup>

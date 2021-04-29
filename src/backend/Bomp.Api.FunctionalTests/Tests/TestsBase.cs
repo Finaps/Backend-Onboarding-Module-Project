@@ -1,4 +1,4 @@
-namespace HRSolution.Web.Api.FunctionalTests.Tests
+namespace Bomp.FunctionalTests.Tests
 {
   public class Tests
   {
