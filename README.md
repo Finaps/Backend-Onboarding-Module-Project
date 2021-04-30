@@ -5,7 +5,7 @@ During onboarding, the new collegue will fork and extend this project to learn n
 On resolution the Mentor(s) can look at the forked project together and discuss to learn even more.
 
 Challenges are scattered troughout the codebase which can form inspiration for extending functionality.
-The challenges.txt file contains more general challenges that apply to a wider part of the codebase.
+The Challenges.md file contains more general challenges that apply to a wider part of the codebase.
 
 ## Getting started
 - Fork or Clone the project from the [Github](https://github.com/Finaps/Backend-Onboarding-Module-Project)

@@ -14,7 +14,7 @@
 - Run this seperate Database via Docker
 
 ### Dependency Injection
-Use Dependency Injection to ensure we use only one Httpclient for the entire controller, instead of one for each request.
+- Use Dependency Injection to ensure we use only one Httpclient for the entire controller, instead of one for each request.
 
 ### Defensive programming
 - The program should always report information to the user about what went wrong, and should only support actions that it can handle. Try to improve the projects error handling, propagation and prevention so it never breaks.

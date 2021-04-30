@@ -10,7 +10,7 @@ services:
   client:
     image: Bomp:latest
     build:
-      context: ./client
+      context: ./frontend/PokeProj
     ports:
       - 3000:3000
   database:
