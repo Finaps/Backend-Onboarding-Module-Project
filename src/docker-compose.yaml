@@ -2,18 +2,14 @@ version: '3.8'
 
 services:
   backend:
-    image: Bomp:latest
+    image: bomp.api:latest
     build:
-      context: ./backend
+      context: ./backend/Bomp.Api
     ports:
       - 5000:80
   client:
-    image: Bomp:latest
+    image: pokeproj:latest
     build:
       context: ./frontend/PokeProj
     ports:
-      - 3000:3000
-  database:
-    image: mcr.microsoft.com/mssql/server:2019-latest
-    ports:
-      - 1433:1433
+      - 4000:80

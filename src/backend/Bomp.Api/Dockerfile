@@ -3,20 +3,18 @@ WORKDIR /app
 EXPOSE 80
  
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
-WORKDIR /src
+WORKDIR /app
 
 RUN apt-get update && \
   apt-get upgrade -y && \
   apt-get install -y procps
 
 COPY "Bomp.Api/Bomp.Api.csproj" "Bomp.Api/Bomp.Api.csproj"
-WORKDIR /src/Bomp.Api
-RUN dotnet restore 
-WORKDIR /src
+RUN dotnet restore
  
 COPY . .
-WORKDIR /src/Bomp.Api
-RUN dotnet publish -c Release -o /app
+WORKDIR /app/Bomp.Api
+RUN dotnet publish -c Release
  
 FROM base AS final
 WORKDIR /app

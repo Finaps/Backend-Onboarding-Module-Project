@@ -9,17 +9,13 @@ services:
       - ConnectionStrings__ViewContext=Server=database,1433;Database=views;User Id=sa;Password=Pass@word
     build:
       context: ./backend
-      dockerfile: BOMP.Api/Dockerfile.develop
+      # dockerfile: Bomp.Api/Dockerfile.develop
   client:
     volumes:
-      - ./client/src:/app/src
+      - ./frontend/PokeProj/src:/app/src
     stdin_open: true
     environment:
       - CHOKIDAR_USEPOLLING=true
     build:
-      context: ./client
-      dockerfile: Dockerfile.develop
-  database:
-    environment:
-      SA_PASSWORD: "Pass@word"
-      ACCEPT_EULA: "Y"
+      context: ./frontend/PokeProj
+      # dockerfile: Dockerfile.develop
