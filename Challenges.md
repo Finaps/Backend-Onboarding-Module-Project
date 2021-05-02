@@ -15,6 +15,7 @@
 - Can you restrict certain controllers?
 - Can you make certain controllers not require authentication?
 - How about enabling or disabling CORS?
+- Is the database
 
 ## Testing
 
@@ -23,6 +24,9 @@
 - Can you workout how much code coverage your tests are achieving? 
   - Maybe [Coverlet](https://github.com/coverlet-coverage/coverlet) would help?
 - Can you ensure all your injected dependecies resolve correctly?
+- Can we validate the OpenAPI? 
+  - Maybe something like [Dredd](https://dredd.org/en/latest/) could help us?
+- Experiement with possible testing tools [list](https://github.com/dariusz-wozniak/List-of-Testing-Tools-and-Frameworks-for-.NET/blob/master/README.md)
 
 ## Database and Docker
 
@@ -39,3 +43,13 @@
 ## Defensive programming
 
 - The program should always report information to the user about what went wrong, and should only support actions that it can handle. Try to improve the projects error handling, propagation and prevention so it never breaks.
+
+## Documentation
+
+- Are you able to document your data models? 
+
+## Misc
+
+- Could we make our service performance actions in the background?
+  - Maybe a daily fetch of pokemone with birthdays, that day?
+- What other NuGets could enhance our service?
