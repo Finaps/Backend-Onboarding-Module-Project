@@ -5,8 +5,8 @@
 - Extend the Pokemon Model to also store for example its weight, 4 moves it can learn or the places it can be caught.
 - Extend the Pokemon Model to also store each Pokemons evolutions, adding a reference to each Pokemons previous and next evolution.
 - Extend it whichever way you like, look on the [PokeAPI](https://pokeapi.co/) for inspiration.
-- If you use an external login (such as facebook) could you use, user data to improve the experience?
-  - For example, find the pokemon with the matching birthdays?
+- If you use an external login (such as facebook) could you use user data to improve the experience?
+  - For example, find pokemon with matching birthdays?
 
 ## Security
 
