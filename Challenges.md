@@ -10,12 +10,12 @@
 
 ## Security
 
-- How about adding authentication?
-  - Could be fun to try an external login, such as Facebook/Google/Twitter etc.
+- How about adding authentication? [docs](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/?view=aspnetcore-5.0) [example](https://dotnetcorecentral.com/blog/authentication-handler-in-asp-net-core/)
+- Could be fun to try an external login, such as Facebook/Google/Twitter etc.
 - Can you restrict certain controllers?
 - Can you make certain controllers not require authentication?
 - How about enabling or disabling CORS?
-- Is the database
+- Is the database secured? [docs](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/secure-data?view=aspnetcore-5.0)
 
 ## Testing
 

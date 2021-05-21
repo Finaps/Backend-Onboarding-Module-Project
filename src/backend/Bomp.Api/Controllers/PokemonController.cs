@@ -30,6 +30,7 @@ namespace Bomp.Controllers
       {
         var response = httpClient.GetAsync("https://pokeapi.co/api/v2/pokemon/ditto").Result;
         var t = response.Content.ReadAsStringAsync().Result;
+        // The following line deserializes the Json from the pokeapi into a Pokemon object we defined ourself
         var pokemon = JsonSerializer.Deserialize<Pokemon>(response.Content.ReadAsStringAsync().Result, jsonSettings);
         return pokemon;
       }
